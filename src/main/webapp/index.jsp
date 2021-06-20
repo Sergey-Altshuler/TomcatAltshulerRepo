@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<h1>This is start project page.</h1>
+<h1>This is start page.</h1>
 <hr>
 <h2>If you want to see the core of the project, click on the link below.</h2>
 <br>
