@@ -1,11 +1,14 @@
 package com.example.servlets;
 
+import com.example.HTML.HTMLWorker;
 import com.example.supply.GeneratorForDB;
 import com.example.util.DBConnectionUtil;
 
-import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @WebServlet(name = "servlet", value = "/servlet")
 public class Servlet extends HttpServlet {
@@ -16,20 +19,8 @@ public class Servlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
-        PrintWriter out = response.getWriter();
+        HTMLWorker hw = new HTMLWorker(response);
+        hw.displayChoosePage();
 
-        out.println("<html><head><meta charset=\"utf-8\"><link rel = \"stylesheet\" href=\"style.css\" type=\"text/css\"></head><body>");
-        out.println("<a href=\"index.jsp\" class=\"link\">" + "move to start page" + "</a>");
-        out.println("<h4>" + "Choose what you want to display" + "</h4>");
-        out.println("<select onchange=\"window.location.href=this.options[this.selectedIndex].value\" class=\"link\">");
-        out.println("<option selected value= \"none\">" + "none" + "</option>");
-        out.println("<option value= \"taskServlet\">" + "tasks" + "</option>");
-        out.println("<option value= \"coachServlet\">" + "coaches" + "</option>");
-        out.println("<option value= \"studentServlet\">" + "students" + "</option>");
-        out.println("</select>");
-
-        out.println("</body></html>");
     }
 }

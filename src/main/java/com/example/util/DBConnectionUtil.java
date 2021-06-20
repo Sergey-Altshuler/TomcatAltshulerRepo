@@ -17,13 +17,15 @@ public class DBConnectionUtil {
         }
         entityManager.getTransaction().commit();
     }
-    public static void saveAll(){
+
+    public static void saveAll() {
         saveList(GeneratorForDB.getCoachList());
         saveList(GeneratorForDB.getStudentList());
         saveList(GeneratorForDB.getTaskList());
     }
-    public List<?> getList(Class<?> clazz){
-        String annotationName=clazz.getAnnotation(Entity.class).name();
+
+    public static List<?> getList(Class<?> clazz) {
+        String annotationName = clazz.getAnnotation(Entity.class).name();
         Query query = entityManager.createQuery("from " + annotationName);
         return query.getResultList();
     }

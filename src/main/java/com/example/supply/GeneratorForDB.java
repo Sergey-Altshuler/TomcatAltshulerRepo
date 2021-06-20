@@ -14,10 +14,10 @@ public class GeneratorForDB {
     private final static List<Task> taskList = new ArrayList<>();
 
     private final static List<String> names = List.of("Сергей", "Андрей", "Дима", "Гена", "Павел", "Денис", "Илья", "Егор", "Михаил");
-    private final static List<String> titles = List.of("C++", "Ruby", "Android", "Java", "JS", "Pascal", "HTML-CSS");
-    private final static List<String> difficulties = List.of("easy", "medium", "hard", "extremely hard");
-    private final static List<String> profLevels = List.of("trainee", "junior", "middle", "senior", "teamLead");
-    private final static List<String> descriptions = List.of("write a program", "fix bags", "create an application", "repair a computer");
+    private final static List<String> titles = List.of("C++", "Ruby", "Android", "Java", "JS", "Pascal", "HTML-CSS", "Ruby");
+    private final static List<String> difficulties = List.of("very easy", "easy", "medium", "hard", "extremely hard");
+    private final static List<String> profLevels = List.of("middle", "middle+", "senior", "senior+");
+    private final static List<String> descriptions = List.of("write a program", "fix bags", "create an application");
 
     public static List<Coach> getCoachList() {
         return coachList;
