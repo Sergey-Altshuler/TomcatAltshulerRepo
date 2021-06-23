@@ -1,0 +1,51 @@
+h1 {
+    color: red;
+    background-color: aquamarine;
+    text-align: center;
+    font-family: Arial, serif;
+    font-weight: bold;
+}
+h2 {
+    color: blue;
+    background-color: cornsilk;
+    text-align: center;
+    font-family: Arial, serif;
+    font-weight: bolder;
+}
+
+.link {
+    color: darkorange;
+    text-align: left;
+    font-family: Verdana, serif;
+    font-size: x-large;
+}
+
+table, th, td {
+    border: 2px solid black;
+
+}
+
+th {
+    height: 75px;
+    background-color: green;
+    color: azure;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    font-size: xx-large;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 40px;
+}
