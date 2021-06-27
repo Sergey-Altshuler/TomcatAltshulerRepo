@@ -1,15 +1,18 @@
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Educational IT Centre</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<h1> Welcome to online learning IT-centre!</h1>
+<br>
+<br>
+<br>
+<br>
+<a href="courseServlet" class="link">click here and start learning!</a>
 </body>
 </html>

@@ -5,8 +5,8 @@
     <persistence-unit name="tomcat21_06_2021" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.example.model.Coach</class>
-        <class>com.example.model.Task</class>
-        <class>com.example.model.Student</class>
+        <class>com.example.model.Course</class>
+        <class>com.example.model.ReportCard</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url"
