@@ -15,9 +15,14 @@ public class DAOImpl<T> implements DAO<T> {
     private static final Transaction transaction = session.getTransaction();
     @Override
     public void save(T t) {
-        transaction.begin();
-        session.saveOrUpdate(t);
-        transaction.commit();
+        try {
+            transaction.begin();
+            session.saveOrUpdate(t);
+            transaction.commit();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -44,9 +49,8 @@ public class DAOImpl<T> implements DAO<T> {
 
     @Override
     public List<T> getAll(Class<T> generic) throws SQLException {
-        String annotationName = generic.getAnnotation(Entity.class).name();
+       String annotationName = generic.getAnnotation(Entity.class).name();
         Query query = session.createQuery("from " + annotationName);
         return query.getResultList();
-
     }
 }

@@ -39,20 +39,24 @@ else {
     coach3 = finalList.get(5);
 }
 %>
-<a href="index.jsp">go to start page</a>
+<a href="index.jsp" class="link">go to start page</a>
 <h1> Choose coach you want to be taught: </h1>
+<br>
+<br>
+<br>
 
-<form action="fillTheFormServlet" method="POST">
-    <select name="coach">
-        <option selected value="none"> Please choose a coach </option>
+<form action="fillTheFormServlet" method="POST" align="center">
+
+    <select name="coach" required align="center">
+        <option disabled>Please choose a coach </option>
         <option value=<%=coach1.getNameAndSurname()%>> <%=coach1.getNameAndSurname()%> </option>
         <option value=<%=coach2.getNameAndSurname()%>> <%=coach2.getNameAndSurname()%> </option>
         <option value=<%=coach3.getNameAndSurname()%>> <%=coach3.getNameAndSurname()%> </option>
     </select>
     <br>
+    <br>
 
-    <input type="submit"  value="submit"/>
-
+    <input type="submit"  value="submit" size="150px"/>
 </form>
 </body>
 </html>

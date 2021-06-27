@@ -12,12 +12,18 @@ h2 {
     font-family: Arial, serif;
     font-weight: bolder;
 }
-
+h3 {
+     color: black;
+     font-family: "Arial Black", sans-serif;
+     font-weight: bold;
+     text-align: center;
+ }
 .link {
-    color: darkorange;
-    text-align: left;
+    color: darkred;
+    text-align: center;
     font-family: Verdana, serif;
-    font-size: x-large;
+    font-size: 40px;
+    background-color: cyan;
 }
 
 table, th, td {

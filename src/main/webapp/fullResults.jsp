@@ -2,17 +2,20 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.model.ReportCard" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
-
 <html>
 <head>
-    <title>Choose a course</title>
+    <title>Total Results</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<a href="index.jsp">go to start page</a>
+<a href="index.jsp" class="link">go to start page</a>
 <h1> Result list </h1>
+<br>
+<br>
+<br>
+<h2> Average mark for all students: ${avgMark} </h2>
+<br>
 <table>
     <tr>
         <th>id</th>
@@ -34,6 +37,7 @@
             <td>${table.coachYouHaveWorked}</td>
         </tr>
     </c:forEach>
+
 </table>
 </body>
 

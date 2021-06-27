@@ -5,6 +5,7 @@ import com.example.model.Coach;
 import com.example.model.Course;
 import com.example.model.ReportCard;
 
+import javax.management.Query;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -73,6 +74,15 @@ public class Admin {
      }
     public static void saveCoaches() throws SQLException{
         daoCoach.saveAll(coaches);
+    }
+
+    public static String getAverageMark() throws SQLException {
+        double result=0;
+        for (int i=0; i<Admin.getResults().size(); i++){
+            result+=Admin.getResults().get(i).getMark();
+            if (i==Admin.getResults().size()-1) result=result/(i+1);
+        }
+        return String.format("%.2f", result);
     }
 
 }

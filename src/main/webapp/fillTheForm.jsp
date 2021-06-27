@@ -13,16 +13,19 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<a href="index.jsp"> go to start page</a>
+<a href="index.jsp" class="link"> go to start page</a>
 <h1> Please, fill in the form below </h1>
 <br>
-<form action="quizServlet" method="POST">
-    Your name: <input name="name" type="text">
+<br>
+<br>
+<form action="quizServlet" method="POST" align="center">
+    <h3>
+    Your name: <br> <input required name="name" type="text" size="100px">
     <br>
-    Your surname: <input name="surname" type="text">
+    Your surname: <br> <input required name="surname" type="text" size="100px">
     <br>
-    <input type="submit"  value="submit"/>
-
+    <input type="submit"  value="submit" size="150px"/>
+  </h3>
 </form>
 </body>
 </html>

@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -27,8 +28,9 @@ public class ResultTestServlet extends HttpServlet {
             if (result) mark++;
             request.setAttribute("task"+(i+1), result);
         }
-        request.setAttribute("totalMark", mark);
-        request.setAttribute("review", ResultController.getMarksAndReviews().get(mark));
+        HttpSession httpSession = request.getSession();
+        httpSession.setAttribute("totalMark", mark);
+        httpSession.setAttribute("review", ResultController.getMarksAndReviews().get(mark));
         BuildReportCard.setMarkAndReview(mark, ResultController.getMarksAndReviews().get(mark));
         Admin.saveResult(BuildReportCard.getReportCard());
         BuildReportCard.clear();

@@ -17,6 +17,7 @@ public class TotalResultServlet extends HttpServlet {
     @SneakyThrows
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("table", Admin.getResults());
+        request.setAttribute("avgMark", Admin.getAverageMark());
         ServletContext servletContext = getServletContext();
         RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/fullResults.jsp");
         requestDispatcher.forward(request,response);

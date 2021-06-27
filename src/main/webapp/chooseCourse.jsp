@@ -13,20 +13,22 @@
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
 <body>
-<a href="index.jsp">go to start page</a>
+<a href="index.jsp" class="link">go to start page</a>
 <h1> Choose course you want to complete: </h1>
-
-<form action="coachServlet" method="POST">
-
-<select name="course">
-    <option selected value="none"> Please choose a course </option>
-    <option value="Java"> Java </option>
-    <option value="Hibernate"> Hibernate</option>
-</select>
+<br>
+<br>
 <br>
 
-<input type="submit"  value="submit"/>
+<form action="coachServlet" method="POST" align="center">
 
+<select required name="course" align="center" >
+    <option disabled>   Please choose a course </option>
+    <option value="Java">  Java </option>
+    <option value="Hibernate"> Hibernate </option>
+</select>
+<br>
+<br>
+<input type="submit"  value="submit" size="150px"/>
 </form>
 </body>
 </html>

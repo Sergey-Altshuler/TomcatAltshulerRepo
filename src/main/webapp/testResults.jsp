@@ -8,13 +8,19 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <title>Choose a course</title>
+    <title>Your Results</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<a href="index.jsp">go to start page</a>
+<a href="index.jsp" class="link">go to start page</a>
 <h1> Your results </h1>
+<br>
+<br>
+<br>
+<a href="totalResultServlet" class="link">click here and see all results</a>
+<br>
+<br>
 <table>
     <tr>
         <th>Task1</th>
@@ -34,7 +40,7 @@
         <td>${totalMark}</td>
         <td>${review}</td>
     </tr>
-    <a href="totalResultServlet">click here and see all results</a>
+
 </table>
 </body>
 
